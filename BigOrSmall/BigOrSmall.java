@@ -4,23 +4,32 @@ import java.util.*;
 public class BigOrSmall{
 	int small;
 
+
+	// choice exception
+	public void check01(int input) throws ChoiceException{
+		if(input!=0 && input!=1){
+			ChoiceException e = new ChoiceException();
+			throw e;
+		}
+	}
+
+
 	// input 0 or 1
 	public int input01(){
-		int input;
+		int input = 0;
 		while(true){
 			Scanner scanner = new Scanner(System.in);
 			try{
 				input = scanner.nextInt();
+				this.check01(input);
 			}catch(java.util.InputMismatchException e){
 				System.out.println("0か1(半角)で入力してください");
 				continue;
-			}
-			if(input==0 || input==1){
-				return input;
-			}else{
+			}catch(ChoiceException e){
 				System.out.println("0か1(半角)で入力してください");
 				continue;
 			}
+			return input;
 		}
 	}
 
@@ -72,4 +81,10 @@ public class BigOrSmall{
 			return false;
 	}
 
+}
+
+
+
+// exception class
+class ChoiceException extends Exception{
 }
