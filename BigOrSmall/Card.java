@@ -40,15 +40,20 @@ public class Card{
 	public void drawCard(int times){
 		cardNum = cardList.get(times-1);
 		toranpu();
+		System.out.println("");
+		System.out.println("************************");
 		if(times==1)
 			System.out.println("現在のカード : " + suit + num);
 		else
 			System.out.println("引いたカード : " + suit + num);
+		System.out.println("************************");
 	}
 
 
 	public void showCard(){
 		System.out.println("");
+		System.out.println("************************");
 		System.out.println("現在のカード : " + suit + num);
+		System.out.println("************************");
 	}
 }

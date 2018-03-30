@@ -24,7 +24,7 @@ public class Chip{
 
 	public void showChip(){
 		System.out.println("");
-		System.out.println("*****現状*****");
+		System.out.println("*****チップ枚数*****");
 		System.out.println("チップ : "+chipSum+" ([10]:"+chip10+"枚, [1]:"+chip1+"枚)");
 	}
 

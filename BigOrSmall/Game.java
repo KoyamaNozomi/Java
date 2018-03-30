@@ -56,6 +56,7 @@ public class Game{
 			// end game when no chip
 			boolean check = chip.check0chip();
 			if(!check){
+				System.out.println("");
 				System.out.println("chipがなくなりました。ゲームを終了します");
 				break;
 			}
